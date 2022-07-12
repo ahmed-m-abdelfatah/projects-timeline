@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #456990;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.625rem;
+  padding-top: 0.9375rem;
+}
+
+.timeline {
+  white-space: nowrap;
+  overflow-x: auto;
+
+  ol {
+    font-size: 0;
+    min-width: 100vw;
+    padding: 15rem 0;
+
+    li {
+      position: relative;
+      display: inline-block;
+      list-style-type: none;
+      width: 10rem;
+      height: 0.1875rem;
+      background: #fff;
+
+      &:last-child {
+        width: 17.5rem;
+      }
+
+      &:not(:first-child) {
+        margin-left: 0.875rem;
+      }
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% + 0.0625rem);
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background: #f45b69;
+      }
+
+      &:nth-child(odd) div {
+        top: -1rem;
+        transform: translateY(-100%);
+      }
+
+      &:nth-child(odd) div::before {
+        top: 100%;
+        border-width: 0.5rem 0.5rem 0 0;
+        border-color: white transparent transparent transparent;
+      }
+
+      &:nth-child(even) div {
+        top: calc(100% + 1rem);
+      }
+
+      &:nth-child(even) div::before {
+        top: -0.5rem;
+        border-width: 0.5rem 0 0 0.5rem;
+        border-color: transparent transparent transparent white;
+      }
+
+      div {
+        position: absolute;
+        left: calc(100% + 0.4375rem);
+        width: 17.5rem;
+        padding: 0.9375rem;
+        font-size: 1rem;
+        white-space: normal;
+        color: black;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+        }
+
+        .title {
+          margin-bottom: 0.6rem;
+        }
+
+        .date {
+          font-size: 0.8rem;
+          margin-bottom: 0.6rem;
+          color: gray;
+        }
+
+        a {
+          text-transform: capitalize;
+          padding: 6px 10px;
+          border-radius: 40px;
+          text-decoration: none;
+          border: 1px solid;
+          color: #000;
+          transform: 0.5s;
+
+          &:hover {
+            background-color: gray;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

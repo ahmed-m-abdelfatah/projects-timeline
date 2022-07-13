@@ -83,7 +83,7 @@ var flutterData = [
   {
     type: 'flutter',
     title: 'flutter_facebook_clone',
-    date: 'Sep 2021',
+    date: 'Nov 2021',
     url: 'https://github.com/ahmed-m-abdelfatah/flutter_facebook_clone',
   },
 ];

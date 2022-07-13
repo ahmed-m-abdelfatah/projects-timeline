@@ -57,3 +57,33 @@ var backEndData = [
     url: 'https://github.com/ahmed-m-abdelfatah/password_protected_file_sharing_node_js',
   },
 ];
+
+var fullStackData = [
+  {
+    type: 'fullstack',
+    title: 'front_end_back_end_project_01',
+    date: 'Sep 2021',
+    url: 'https://github.com/ahmed-m-abdelfatah/front_end_back_end_project_01',
+  },
+];
+
+var flutterData = [
+  {
+    type: 'flutter',
+    title: 'breaking_bad',
+    date: 'Sep 2021',
+    url: 'https://github.com/ahmed-m-abdelfatah/breaking_bad',
+  },
+  {
+    type: 'flutter',
+    title: 'budget_tracker_with_notion_api',
+    date: 'Sep 2021',
+    url: 'https://github.com/ahmed-m-abdelfatah/budget_tracker_with_notion_api',
+  },
+  {
+    type: 'flutter',
+    title: 'flutter_facebook_clone',
+    date: 'Sep 2021',
+    url: 'https://github.com/ahmed-m-abdelfatah/flutter_facebook_clone',
+  },
+];

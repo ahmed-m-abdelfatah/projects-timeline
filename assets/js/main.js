@@ -21,7 +21,7 @@ function displayData(data, element) {
         <li>
         <div>
           <h4 class="title">
-            {${capitalize(item.type)}}(${indexFormat(data.length - index)})
+            {${capitalize(element)}}(${indexFormat(data.length - index)})
             <br>
             ${item.title}
           </h4>
@@ -44,3 +44,5 @@ function displayData(data, element) {
 
 displayData(frontEndData, 'frontend');
 displayData(backEndData, 'backend');
+displayData(fullStackData, 'fullstack');
+displayData(flutterData, 'flutter');

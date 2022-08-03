@@ -41,6 +41,12 @@ var frontEndData = [
     date: 'Apr 2022',
     url: 'https://github.com/ahmed-m-abdelfatah/react-admin-dashboard',
   },
+  {
+    type: 'frontend',
+    title: 'react_18_fitness_app',
+    date: 'Aug 2022',
+    url: 'https://github.com/ahmed-m-abdelfatah/react_18_fitness_app',
+  },
 ];
 
 var backEndData = [

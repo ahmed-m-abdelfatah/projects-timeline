@@ -71,6 +71,12 @@ var fullStackData = [
     date: 'Sep 2021',
     url: 'https://github.com/ahmed-m-abdelfatah/front_end_back_end_project_01',
   },
+  {
+    type: 'fullstack',
+    title: 'arab_bureau',
+    date: 'Nov 2022',
+    url: 'https://github.com/ahmed-m-abdelfatah/arab_bureau_tracker',
+  },
 ];
 
 var flutterData = [

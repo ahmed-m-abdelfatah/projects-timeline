@@ -1,23 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@use './variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 ::-webkit-scrollbar {
   width: 0;
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: transparent;
+
+  &-track {
+    background-color: transparent;
+  }
+
+  &-thumb {
+    background-color: transparent;
+  }
 }
 
 html {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   font-size: 16px;
 
-  @media (max-width: 992px) {
+  @include mdMax {
     font-size: 14px;
   }
 
-  @media (max-width: 767) {
+  @include smMax {
     font-size: 12px;
   }
 }
@@ -29,9 +32,9 @@ html {
 }
 
 body {
-  background-color: #456990;
-  color: #fff;
-  font-family: 'Nunito', sans-serif;
+  background-color: map-get($map: $colors, $key: bg);
+  color: map-get($map: $colors, $key: main);
+  font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
@@ -40,8 +43,6 @@ h2 {
   font-size: 1.625rem;
   padding-top: 0.9375rem;
 }
-
-$theme: #fff;
 
 .timeline {
   white-space: nowrap;
@@ -59,7 +60,7 @@ $theme: #fff;
       list-style-type: none;
       width: 10rem;
       height: 0.1875rem;
-      background: $theme;
+      background: map-get($map: $colors, $key: main);
 
       &:last-child {
         width: 100%;
@@ -78,7 +79,7 @@ $theme: #fff;
         width: 0.75rem;
         height: 0.75rem;
         border-radius: 50%;
-        background: $theme;
+        background: map-get($map: $colors, $key: main);
       }
 
       &:nth-child(odd) div {
@@ -89,7 +90,7 @@ $theme: #fff;
       &:nth-child(odd) div::before {
         top: 100%;
         border-width: 0.5rem 0.5rem 0 0;
-        border-color: $theme transparent transparent transparent;
+        border-color: map-get($map: $colors, $key: main) transparent transparent transparent;
       }
 
       &:nth-child(even) div {
@@ -99,7 +100,7 @@ $theme: #fff;
       &:nth-child(even) div::before {
         top: -0.5rem;
         border-width: 0.5rem 0 0 0.5rem;
-        border-color: transparent transparent transparent $theme;
+        border-color: transparent transparent transparent map-get($map: $colors, $key: main);
       }
 
       div {
@@ -109,8 +110,8 @@ $theme: #fff;
         padding: 0.9375rem;
         font-size: 1rem;
         white-space: normal;
-        color: black;
-        background: $theme;
+        color: map-get($map: $colors, $key: black);
+        background: map-get($map: $colors, $key: main);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -133,7 +134,7 @@ $theme: #fff;
         .date {
           font-size: 0.8rem;
           margin-bottom: 0.6rem;
-          color: gray;
+          color: map-get($map: $colors, $key: grey);
         }
 
         a {
@@ -142,12 +143,12 @@ $theme: #fff;
           border-radius: 40px;
           text-decoration: none;
           border: 1px solid;
-          color: #000;
+          color: map-get($map: $colors, $key: black);
           transform: 0.5s;
 
           &:hover {
-            background-color: gray;
-            color: #fff;
+            background-color: map-get($map: $colors, $key: grey);
+            color: map-get($map: $colors, $key: main);
           }
 
           span {
@@ -156,5 +157,15 @@ $theme: #fff;
         }
       }
     }
+  }
+}
+
+footer {
+  background-color: map-get($map: $colors, $key: main);
+  text-align: center;
+  padding: 2rem 0;
+
+  h1 {
+    font-size: 1rem;
   }
 }

@@ -13,12 +13,6 @@ var frontEndData = [
   },
   {
     type: 'frontend',
-    title: 'kasper',
-    date: 'Jul 2021',
-    url: 'https://github.com/ahmed-m-abdelfatah/kasper',
-  },
-  {
-    type: 'frontend',
     title: 'html-css-template-three',
     date: 'Oct 2021',
     url: 'https://github.com/ahmed-m-abdelfatah/html_css_template_three',

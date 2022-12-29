@@ -1,3 +1,2 @@
 ## View Live
-
-https://ahmed-m-abdelfatah.github.io/projects-timeline
+https://ahmed-m-abdelfatah.github.io/projects-timeline/build

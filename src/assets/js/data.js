@@ -59,6 +59,12 @@ var frontEndData = [
     date: 'Aug 2022',
     url: 'https://github.com/ahmed-m-abdelfatah/react_18_fitness_app',
   },
+  {
+    type: 'frontend',
+    title: 'Valinteca-Frontend-Task-1',
+    date: 'Dec 2022',
+    url: 'https://github.com/ahmed-m-abdelfatah/Valinteca-Frontend-Task-1',
+  },
 ];
 
 var backEndData = [

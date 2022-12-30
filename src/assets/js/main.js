@@ -27,7 +27,7 @@ function displayData(data, element) {
           </h4>
           <span class="date">${item.date}</span>
           <a href="${item.url}" target="_blank">
-            <span>Show project</span>
+            <span>Open Repository</span>
           </a>
         </div>
       </li>

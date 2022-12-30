@@ -75,10 +75,6 @@ p {
   overflow-x: auto;
   scrollbar-color: transparent transparent;
 
-  &:last-child {
-    display: none;
-  }
-
   ol {
     font-size: 0;
     min-width: 100vw;
@@ -178,5 +174,10 @@ footer {
 
   h1 {
     font-size: 1rem;
+  }
+
+  a {
+    display: inline-block;
+    margin: 0.3125rem;
   }
 }

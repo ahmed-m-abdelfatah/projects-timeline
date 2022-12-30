@@ -35,6 +35,25 @@ body {
   background-color: map-get($map: $colors, $key: bg);
   color: map-get($map: $colors, $key: main);
   font-family: 'Open Sans', sans-serif;
+
+  a {
+    text-transform: capitalize;
+    padding: 6px 10px;
+    border-radius: 40px;
+    text-decoration: none;
+    border: 1px solid;
+    color: map-get($map: $colors, $key: black);
+    transform: 0.5s;
+
+    &:hover {
+      background-color: map-get($map: $colors, $key: grey);
+      color: map-get($map: $colors, $key: main);
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
 }
 
 h2 {
@@ -44,10 +63,21 @@ h2 {
   padding-top: 0.9375rem;
 }
 
+p {
+  text-align: center;
+
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
 .timeline {
   white-space: nowrap;
   overflow-x: auto;
   scrollbar-color: transparent transparent;
+
+  &:last-child {
+    display: none;
+  }
 
   ol {
     font-size: 0;
@@ -135,25 +165,6 @@ h2 {
           font-size: 0.8rem;
           margin-bottom: 0.6rem;
           color: map-get($map: $colors, $key: grey);
-        }
-
-        a {
-          text-transform: capitalize;
-          padding: 6px 10px;
-          border-radius: 40px;
-          text-decoration: none;
-          border: 1px solid;
-          color: map-get($map: $colors, $key: black);
-          transform: 0.5s;
-
-          &:hover {
-            background-color: map-get($map: $colors, $key: grey);
-            color: map-get($map: $colors, $key: main);
-          }
-
-          span {
-            font-weight: bold;
-          }
         }
       }
     }

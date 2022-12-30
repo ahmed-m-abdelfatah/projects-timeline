@@ -21,7 +21,7 @@ function displayData(data, element) {
         <li>
         <div>
           <h4 class="title">
-            {${capitalize(element)}}(${indexFormat(data.length - index)})
+            {${capitalize(item.type)}}(${indexFormat(data.length - index)})
             <br>
             ${item.title}
           </h4>

@@ -27,7 +27,7 @@ function displayData(data, element) {
           </h4>
           <span class="date">${item.date}</span>
           <a href="${item.url}" target="_blank">
-            <span>Open Repository</span>
+            <span>Open Link</span>
           </a>
         </div>
       </li>
@@ -46,3 +46,4 @@ displayData(frontEndData, 'frontend');
 displayData(backEndData, 'backend');
 displayData(fullStackData, 'fullstack');
 displayData(flutterData, 'flutter');
+displayData(coursesData, 'courses');

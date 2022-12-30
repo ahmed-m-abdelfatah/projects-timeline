@@ -155,6 +155,10 @@ p {
 
         .title {
           margin-bottom: 0.6rem;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 100%;
         }
 
         .date {

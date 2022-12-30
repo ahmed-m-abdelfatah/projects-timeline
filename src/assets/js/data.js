@@ -117,3 +117,30 @@ var flutterData = [
     url: 'https://github.com/ahmed-m-abdelfatah/flutter_facebook_clone',
   },
 ];
+
+var coursesData = [
+  {
+    type: 'courses',
+    title: 'Elzero Web School Playlists',
+    date: 'Till now',
+    url: 'https://www.youtube.com/@ElzeroAcademy/playlists',
+  },
+  {
+    type: 'courses',
+    title: 'flutter-course-abdullah-mansour',
+    date: 'Sep 2021',
+    url: 'https://github.com/ahmed-m-abdelfatah/flutter-course-abdullah-mansour',
+  },
+  {
+    type: 'courses',
+    title: 'Route_Frontend_Course_C37',
+    date: 'Mar 2022',
+    url: 'https://github.com/ahmed-m-abdelfatah/Route_Frontend_Course_C37',
+  },
+  {
+    type: 'courses',
+    title: 'Route_Backend_Course_C37',
+    date: 'Jul 2022',
+    url: 'https://github.com/ahmed-m-abdelfatah/Route_Backend_Course_C37',
+  },
+];

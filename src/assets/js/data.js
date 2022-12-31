@@ -72,7 +72,7 @@ var backEndData = [
     type: 'backend',
     title: 'route-exam-01',
     date: 'Jul 2022',
-    url: 'http://route-exam-01-node.herokuapp.com/docs/',
+    url: 'https://route-exam-01-node.onrender.com/docs',
   },
   {
     type: 'backend',

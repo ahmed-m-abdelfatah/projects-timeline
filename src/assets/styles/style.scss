@@ -31,10 +31,18 @@ html {
   box-sizing: border-box;
 }
 
+$used-black: map-get(
+  $map: $colors,
+  $key: used-black,
+);
+
 body {
   background-color: map-get($map: $colors, $key: bg);
-  color: $color-theme;
+  color: $used-black;
   font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   a {
     text-transform: capitalize;
@@ -47,7 +55,7 @@ body {
 
     &:hover {
       background-color: map-get($map: $colors, $key: used-grey);
-      color: $color-theme;
+      color: $used-black;
     }
 
     span {
@@ -56,120 +64,174 @@ body {
   }
 }
 
-h2 {
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 1.625rem;
-  padding-top: 0.9375rem;
-}
+main {
+  flex-grow: 1;
 
-p {
-  text-align: center;
+  h2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.625rem;
+    padding-top: 0.9375rem;
+  }
 
-  text-transform: capitalize;
-  font-size: 1rem;
-}
+  p {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
 
-.timeline {
-  white-space: nowrap;
-  overflow-x: auto;
-  scrollbar-color: transparent transparent;
+  .timeline {
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-color: transparent transparent;
 
-  $color-theme: map-get(
-    $map: $colors,
-    $key: main,
-  );
+    ol {
+      font-size: 0;
+      min-width: 100vw;
+      padding: 15rem 0;
 
-  ol {
-    font-size: 0;
-    min-width: 100vw;
-    padding: 15rem 0;
+      li {
+        position: relative;
+        display: inline-block;
+        list-style-type: none;
+        width: 10rem;
+        height: 0.1875rem;
 
-    li {
-      position: relative;
-      display: inline-block;
-      list-style-type: none;
-      width: 10rem;
-      height: 0.1875rem;
-      background: $color-theme;
-
-      &:last-child {
-        width: 100%;
-      }
-
-      &:not(:first-child) {
-        margin-left: 0.875rem;
-      }
-
-      &:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: calc(100% + 0.0625rem);
-        width: 0.75rem;
-        height: 0.75rem;
-        border-radius: 50%;
-        background: $color-theme;
-      }
-
-      &:nth-child(odd) div {
-        top: -1rem;
-        transform: translateY(-100%);
-      }
-
-      &:nth-child(odd) div::before {
-        top: 100%;
-        border-width: 0.5rem 0.5rem 0 0;
-        border-color: $color-theme transparent transparent transparent;
-      }
-
-      &:nth-child(even) div {
-        top: calc(100% + 1rem);
-      }
-
-      &:nth-child(even) div::before {
-        top: -0.5rem;
-        border-width: 0.5rem 0 0 0.5rem;
-        border-color: transparent transparent transparent $color-theme;
-      }
-
-      div {
-        position: absolute;
-        left: calc(100% + 0.4375rem);
-        width: 17.5rem;
-        padding: 0.9375rem;
-        font-size: 1rem;
-        white-space: normal;
-        color: map-get($map: $colors, $key: used-white);
-        background: $color-theme;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        transition: 0.1s;
-
-        &::before {
-          content: '';
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 0;
-          height: 0;
-          border-style: solid;
-        }
-
-        .title {
-          margin-bottom: 0.6rem;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
+        &:last-child {
           width: 100%;
         }
 
-        .date {
-          font-size: 0.8rem;
-          margin-bottom: 0.6rem;
-          color: map-get($map: $colors, $key: used-grey);
+        &:not(:first-child) {
+          margin-left: 0.875rem;
+        }
+
+        &:not(:last-child)::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: calc(100% + 0.0625rem);
+          width: 0.75rem;
+          height: 0.75rem;
+          border-radius: 50%;
+        }
+
+        &:nth-child(odd) div {
+          top: -1rem;
+          transform: translateY(-100%);
+        }
+
+        &:nth-child(odd) div::before {
+          top: 100%;
+          border-width: 0.5rem 0.5rem 0 0;
+        }
+
+        &:nth-child(even) div {
+          top: calc(100% + 1rem);
+        }
+
+        &:nth-child(even) div::before {
+          top: -0.5rem;
+          border-width: 0.5rem 0 0 0.5rem;
+        }
+
+        div {
+          position: absolute;
+          left: calc(100% + 0.4375rem);
+          width: 17.5rem;
+          padding: 0.9375rem;
+          font-size: 1rem;
+          white-space: normal;
+          color: map-get($map: $colors, $key: used-white);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          transition: 0.1s;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+          }
+
+          .title {
+            margin-bottom: 0.6rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 100%;
+          }
+
+          .date {
+            font-size: 0.8rem;
+            margin-bottom: 0.6rem;
+            color: map-get($map: $colors, $key: used-grey);
+          }
+        }
+      }
+    }
+
+    &#courses {
+      $color-theme: map-get(
+        $map: $colors,
+        $key: used-frontend,
+      );
+
+      ol {
+        li {
+          background: $color-theme;
+
+          &:not(:last-child)::after {
+            background: $color-theme;
+          }
+
+          &:nth-child(odd) div::before {
+            border-color: $color-theme transparent transparent transparent;
+          }
+
+          &:nth-child(even) div::before {
+            border-color: transparent transparent transparent $color-theme;
+          }
+
+          div {
+            background: $color-theme;
+          }
+        }
+      }
+    }
+
+    &#frontend,
+    &#backend,
+    &#fullstack,
+    &#flutter {
+      $color-theme: map-get(
+        $map: $colors,
+        $key: used-black,
+      );
+
+      ol {
+        li {
+          background: $color-theme;
+
+          &:not(:last-child)::after {
+            background: $color-theme;
+          }
+
+          &:nth-child(odd) div::before {
+            border-color: $color-theme transparent transparent transparent;
+          }
+
+          &:nth-child(even) div::before {
+            border-color: transparent transparent transparent $color-theme;
+          }
+
+          div {
+            background: $color-theme;
+          }
         }
       }
     }
@@ -177,7 +239,7 @@ p {
 }
 
 footer {
-  background-color: $color-theme;
+  background-color: $used-black;
   text-align: center;
   padding: 2rem 0;
 

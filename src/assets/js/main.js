@@ -47,3 +47,4 @@ displayData(backEndData, 'backend');
 displayData(fullStackData, 'fullstack');
 displayData(flutterData, 'flutter');
 displayData(coursesData, 'courses');
+clickAndScroll();

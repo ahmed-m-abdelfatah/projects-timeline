@@ -72,12 +72,14 @@ main {
     text-transform: capitalize;
     font-size: 1.625rem;
     padding-top: 0.9375rem;
+    user-select: none;
   }
 
   p {
     text-align: center;
     text-transform: capitalize;
     font-size: 1rem;
+    user-select: none;
   }
 
   .timeline {
@@ -147,6 +149,7 @@ main {
           flex-direction: column;
           align-items: flex-start;
           transition: 0.1s;
+          user-select: none;
 
           &::before {
             content: '';
@@ -164,12 +167,14 @@ main {
             text-overflow: ellipsis;
             overflow: hidden;
             width: 100%;
+            user-select: none;
           }
 
           .date {
             font-size: 0.8rem;
             margin-bottom: 0.6rem;
             color: map-get($map: $colors, $key: used-grey);
+            user-select: none;
           }
         }
       }

@@ -65,6 +65,12 @@ var frontEndData = [
     date: 'Dec 2022',
     url: 'https://github.com/ahmed-m-abdelfatah/Valinteca-Frontend-Task-1',
   },
+  {
+    type: 'frontend',
+    title: 'Games_Web',
+    date: 'Last Update Jun 2023',
+    url: 'https://github.com/ahmed-m-abdelfatah/Games_Web',
+  },
 ];
 
 var backEndData = [

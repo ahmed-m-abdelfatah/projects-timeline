@@ -68,7 +68,7 @@ var frontEndData = [
   {
     type: 'frontend',
     title: 'Games_Web',
-    date: 'Last Update Jun 2023',
+    date: 'Jun 2023',
     url: 'https://github.com/ahmed-m-abdelfatah/Games_Web',
   },
 ];
@@ -100,6 +100,12 @@ var fullStackData = [
     title: 'arab_bureau',
     date: 'Nov 2022',
     url: 'https://github.com/ahmed-m-abdelfatah/arab_bureau_tracker',
+  },
+  {
+    type: 'fullstack',
+    title: 'Anyware-Software-Fullstack-Task',
+    date: 'Jun 2023',
+    url: 'https://github.com/ahmed-m-abdelfatah/anyware-software-fullstack-task',
   },
 ];
 

@@ -31,14 +31,14 @@ html {
   box-sizing: border-box;
 }
 
-$used-black: map-get(
+$color-1: map-get(
   $map: $colors,
-  $key: used-black,
+  $key: color-1,
 );
 
 body {
   background-color: map-get($map: $colors, $key: bg);
-  color: $used-black;
+  color: map-get($map: $colors, $key: color-1);
   font-family: 'Open Sans', sans-serif;
   min-height: 100vh;
   display: flex;
@@ -50,12 +50,12 @@ body {
     border-radius: 40px;
     text-decoration: none;
     border: 1px solid;
-    color: map-get($map: $colors, $key: used-white);
+    color: map-get($map: $colors, $key: color-3);
     transform: 0.5s;
 
     &:hover {
-      background-color: map-get($map: $colors, $key: used-grey);
-      color: $used-black;
+      background-color: map-get($map: $colors, $key: color-2);
+      color: $color-1;
     }
 
     span {
@@ -144,7 +144,7 @@ main {
           padding: 0.9375rem;
           font-size: 1rem;
           white-space: normal;
-          color: map-get($map: $colors, $key: used-white);
+          color: map-get($map: $colors, $key: color-3);
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -173,7 +173,7 @@ main {
           .date {
             font-size: 0.8rem;
             margin-bottom: 0.6rem;
-            color: map-get($map: $colors, $key: used-grey);
+            color: map-get($map: $colors, $key: color-2);
             user-select: none;
           }
         }
@@ -183,7 +183,7 @@ main {
     &#courses {
       $color-theme: map-get(
         $map: $colors,
-        $key: used-frontend,
+        $key: color-4,
       );
 
       ol {
@@ -215,7 +215,7 @@ main {
     &#flutter {
       $color-theme: map-get(
         $map: $colors,
-        $key: used-black,
+        $key: color-1,
       );
 
       ol {
@@ -244,7 +244,7 @@ main {
 }
 
 footer {
-  background-color: $used-black;
+  background-color: $color-1;
   text-align: center;
   padding: 2rem 0;
 

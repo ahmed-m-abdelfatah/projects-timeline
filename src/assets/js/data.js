@@ -68,8 +68,14 @@ var frontEndData = [
   {
     type: 'frontend',
     title: 'Games_Web',
-    date: 'Jun 2023',
+    date: 'Jan 2023',
     url: 'https://github.com/ahmed-m-abdelfatah/Games_Web',
+  },
+  {
+    type: 'frontend',
+    title: 'ASCII folder tree generator',
+    date: 'APR 2023',
+    url: 'https://github.com/ahmed-m-abdelfatah/ASCII-folder-tree-generator',
   },
 ];
 

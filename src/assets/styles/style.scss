@@ -168,6 +168,7 @@ main {
             overflow: hidden;
             width: 100%;
             user-select: none;
+            text-transform: uppercase;
           }
 
           .date {
@@ -175,6 +176,7 @@ main {
             margin-bottom: 0.6rem;
             color: map-get($map: $colors, $key: color-2);
             user-select: none;
+            text-transform: uppercase;
           }
         }
       }

@@ -161,4 +161,10 @@ var coursesData = [
     date: 'Jul 2022',
     url: 'https://github.com/ahmed-m-abdelfatah/Route_Backend_Course_C37',
   },
+  {
+    type: 'courses',
+    title: 'complete-node-bootcamp',
+    date: 'not finished',
+    url: 'https://github.com/ahmed-m-abdelfatah/complete-node-bootcamp',
+  },
 ];

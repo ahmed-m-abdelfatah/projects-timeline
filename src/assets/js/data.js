@@ -116,7 +116,7 @@ var fullStackData = [
   {
     type: 'fullstack',
     title: 'Anyware-Software-Fullstack-Task',
-    date: 'Jun 2023',
+    date: 'JAN 2023',
     url: 'https://github.com/ahmed-m-abdelfatah/anyware-software-fullstack-task',
   },
 ];

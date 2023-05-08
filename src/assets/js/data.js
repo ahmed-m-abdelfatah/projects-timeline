@@ -145,12 +145,6 @@ var flutterData = [
 var coursesData = [
   {
     type: 'courses',
-    title: 'Elzero Web School Playlists',
-    date: 'Till now',
-    url: 'https://www.youtube.com/@ElzeroAcademy/playlists',
-  },
-  {
-    type: 'courses',
     title: 'flutter-course-abdullah-mansour',
     date: 'Sep 2021',
     url: 'https://github.com/ahmed-m-abdelfatah/flutter-course-abdullah-mansour',
@@ -167,10 +161,10 @@ var coursesData = [
     date: 'Jul 2022',
     url: 'https://github.com/ahmed-m-abdelfatah/Route_Backend_Course_C37',
   },
-  {
-    type: 'courses',
-    title: 'complete-node-bootcamp',
-    date: 'not finished',
-    url: 'https://github.com/ahmed-m-abdelfatah/complete-node-bootcamp',
-  },
+  // {
+  //   type: 'courses',
+  //   title: 'complete-node-bootcamp',
+  //   date: 'not finished',
+  //   url: 'https://github.com/ahmed-m-abdelfatah/complete-node-bootcamp',
+  // },
 ];

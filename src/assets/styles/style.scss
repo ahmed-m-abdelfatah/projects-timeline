@@ -176,7 +176,12 @@ main {
             margin-bottom: 0.6rem;
             color: map-get($map: $colors, $key: color-2);
             user-select: none;
-            text-transform: uppercase;
+            text-transform: lowercase;
+            font-weight: bold;
+
+            &.this-month {
+              color: red;
+            }
           }
         }
       }

@@ -2,49 +2,75 @@ const capitalize = text => {
   return text.charAt(0).toUpperCase() + text.slice(1);
 };
 
-const indexFormat = index => {
-  if (index < 10) {
-    return `0${index}`;
+const getYearMonthMS = (dateText = null) => {
+  let newDate;
+
+  if (dateText) {
+    newDate = new Date(dateText);
+  } else {
+    newDate = new Date();
   }
-  return index;
+
+  const yearMonth = new Date(newDate.getFullYear(), newDate.getMonth(), 1);
+  const yearMonthMs = yearMonth.getTime();
+
+  return yearMonthMs;
 };
 
-function displayData(data, element) {
+const indexFormat = index => {
+  return index < 10 ? `0${index}` : `${index}`;
+};
+
+const displayData = (data, element) => {
   if (data.length === 0) {
     return;
   }
 
-  let stash = ``;
+  let listItems = '';
+  const currentDateMS = getYearMonthMS();
+  console.log('currentDateMS:', currentDateMS);
 
-  data.reverse().forEach(function (item, index) {
-    stash += `
-        <li>
+  for (let i = data.length - 1; i >= 0; i--) {
+    const item = data[i];
+    const index = indexFormat(i + 1);
+    const cardDateMS = getYearMonthMS(item.date);
+    isSame = currentDateMS === cardDateMS;
+
+    const listItem = `
+      <li>
         <div>
           <h4 class="title">
-            {${capitalize(item.type)}}(${indexFormat(data.length - index)})
+            {${capitalize(item.type)}}(${index})
             <br>
             ${item.title}
           </h4>
-          <span class="date">${item.date}</span>
+          <span class="date ${isSame && 'this-month'}">${item.date} ${isSame ? `(this month)` : ''}</span>
           <a href="${item.url}" target="_blank">
             <span>Open Link</span>
           </a>
         </div>
       </li>
-        `;
-  });
+    `;
 
-  document.getElementById(element).innerHTML = `
-  <ol>
-   ${stash}
-   <li></li>
-  </ol>
-`;
-}
+    listItems += listItem;
+  }
 
+  const html = `
+    <ol>
+      ${listItems}
+      <li></li>
+    </ol>
+  `;
+
+  document.getElementById(element).innerHTML = html;
+};
+
+// Display data for different categories in the DOM.
 displayData(frontEndData, 'frontend');
 displayData(backEndData, 'backend');
 displayData(fullStackData, 'fullstack');
 displayData(flutterData, 'flutter');
 displayData(coursesData, 'courses');
+
+// Initializes click-and-scroll functionality.
 clickAndScroll();
